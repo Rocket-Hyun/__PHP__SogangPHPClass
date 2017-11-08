@@ -51,7 +51,7 @@ function test_input($data) {
 $sql = "SELECT * FROM PizzaOrders WHERE ".$column_name." = '$value'";
 $result = $connect->query($sql);
 
-echo "<table style='width:100%'> <tr><th>Id Number</th> <th>Name</th><th>Email</th><th>Phone Number</th><th>Topping1</th> <th>Topping2</th><th>Topping3</th><th>Pay Method</th><th>Call First</th></tr>";
+echo "<table style='width:100%'> <tr><th>Order Number</th><th>Id Number</th> <th>Name</th><th>Email</th><th>Phone Number</th><th>Topping1</th> <th>Topping2</th><th>Topping3</th><th>Pay Method</th><th>Call First</th></tr>";
 
 if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
