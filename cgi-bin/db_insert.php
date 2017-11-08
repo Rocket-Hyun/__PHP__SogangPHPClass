@@ -32,8 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $email = test_input($_POST["email"]);
   $phone = test_input($_POST["phone"]);
 
-
-  // for($i=0; $i<3; $i++){
+  // 토핑이 여러개 들어갔으면 따로따로 저장
   if (isset($_POST['topping'])) {
     $toppings = $_POST['topping'];
 
@@ -41,11 +40,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       if (isset($toppings[$i])) {
         $position[$i] = $toppings[$i];
       } else {
-        $position[$i] = "nothing";
+        $position[$i] = NULL;
       }
     }
   }
-  // }
   $topping1 = $position[0];
   $topping2 = $position[1];
   $topping3 = $position[2];
