@@ -16,7 +16,7 @@ $connect = new mysqli($hostname, $username, $password, $dbname)
 //$result = mysql_select_db($dbname,$connect);
 
 if($connect) {
- echo("MySQL Server Connect Success!");
+ echo("MySQL Server Connect Success!<br />");
 }
 else {
  echo("MySQL Server Connect Failed!");
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       if (isset($toppings[$i])) {
         $position[$i] = $toppings[$i];
       } else {
-        $position[$i] = NULL;
+        $position[$i] = "Nothing";
       }
     }
   }
