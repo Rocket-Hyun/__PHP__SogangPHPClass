@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $email = test_input($_POST["email"]);
   $phone = test_input($_POST["phone"]);
 
-  for($i=0; $i<count($_POST["topping"]); $i++){
+  for($i=0; $i<3); $i++){
     $position = $_POST['topping'];
   }
   $topping1 = $position[0];
@@ -53,7 +53,7 @@ function test_input($data) {
 $sql = "INSERT INTO PizzaOrders (idnumber, name, email, phone_number, topping1, topping2, topping3, pay_method, call_first)
 VALUES ($idnumber, $name, $email, $phone, $topping1, $topping2, $topping3, $paymethod, $callfirst)";
 
-if ($conn ->query($sql) === TRUE) {
+if ($connect ->query($sql) === TRUE) {
   echo "New record created successfully";
 } else {
   echo "Error: ". $sql . "<br>" . $conn ->error;
