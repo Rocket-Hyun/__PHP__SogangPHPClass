@@ -11,7 +11,7 @@ $username = "cs20120863";
 $password = "dbpass";
 $dbname = "db20120863";
 
-$connect = new mysqli($hostname, $username, $password)
+$connect = new mysqli($hostname, $username, $password, $dbname)
      or die("DB Connection Failed");
 //$result = mysql_select_db($dbname,$connect);
 
