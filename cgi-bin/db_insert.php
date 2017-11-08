@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   // for($i=0; $i<3; $i++){
   if (isset($_POST['topping'])) {
-    $toppings = test_input($_POST['topping']);
+    $toppings = $_POST['topping'];
 
     for($i=0; $i<3; $i++) {
       if (isset($toppings[i])) {
