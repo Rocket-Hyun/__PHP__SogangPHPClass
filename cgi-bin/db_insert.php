@@ -34,11 +34,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
   // for($i=0; $i<3; $i++){
-  $position = test_input($_POST['topping']);
+  if (isset($_POST['topping'])) {
+    $toppings = test_input($_POST['topping']);
+
+    for($i=0; $i<3; $i++) {
+      if (isset($toppings[i])) {
+        $position[i] = $toppings[i];
+      } else {
+        $position[i] = "nothing";
+      }
+    }
+  }
   // }
-  // $topping1 = $position[0];
-  // $topping2 = $position[1];
-  // $topping3 = $position[2];
+  $topping1 = $position[0];
+  $topping2 = $position[1];
+  $topping3 = $position[2];
 
   $paymethod = test_input($_POST["paymethod"]);
   $callfirst = test_input($_POST["callfirst"]);
@@ -51,7 +61,9 @@ function test_input($data) {
   return $data;
 }
 
-echo($position);
+echo($topping1);
+echo($topping2);
+echo($topping3);
 
 // $sql = "INSERT INTO PizzaOrders (idnumber, name, email, phone_number, topping1, topping2, topping3, pay_method, call_first)
 // VALUES ($idnumber, $name, $email, $phone, $topping1, $topping2, $topping3, $paymethod, $callfirst)";
