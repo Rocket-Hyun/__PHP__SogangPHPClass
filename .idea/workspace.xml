@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ee4945c-fe3a-497b-bef6-21dfe1ddba83" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pizza_order2017.html" afterPath="$PROJECT_DIR$/pizza_order2017.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cgi-bin/db_insert.php" afterPath="$PROJECT_DIR$/cgi-bin/db_insert.php" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,11 +17,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pizza_order2017.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pizza_order2017.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pizza_order2017.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="3" column="74" lean-forward="false" selection-start-line="3" selection-start-column="74" selection-end-line="3" selection-end-column="74" />
+            <state relative-caret-position="312">
+              <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -38,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db_insert.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="db_insert.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cgi-bin/db_insert.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="849">
-              <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+            <state relative-caret-position="39">
+              <caret line="25" column="71" lean-forward="false" selection-start-line="25" selection-start-column="71" selection-end-line="25" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -56,8 +55,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/cgi-bin/db_insert.php" />
         <option value="$PROJECT_DIR$/pizza_order2017.html" />
+        <option value="$PROJECT_DIR$/cgi-bin/db_insert.php" />
       </list>
     </option>
   </component>
@@ -70,7 +69,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="741" />
     <option name="y" value="47" />
-    <option name="width" value="1008" />
+    <option name="width" value="1154" />
     <option name="height" value="1009" />
   </component>
   <component name="ProjectView">
@@ -239,18 +238,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1510154627258</updated>
-      <workItem from="1510154630948" duration="2529000" />
+      <workItem from="1510154630948" duration="2727000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2529000" />
+    <option name="totallyTimeSpent" value="2727000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="741" y="47" width="1008" height="1009" extended-state="0" />
+    <frame x="741" y="47" width="1154" height="1009" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23238696" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20145853" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -319,14 +318,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cgi-bin/db_insert.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="849">
-          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cgi-bin/pizza_order2017.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1092">
@@ -337,8 +328,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pizza_order2017.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="3" column="74" lean-forward="false" selection-start-line="3" selection-start-column="74" selection-end-line="3" selection-end-column="74" />
+        <state relative-caret-position="312">
+          <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cgi-bin/db_insert.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="25" column="71" lean-forward="false" selection-start-line="25" selection-start-column="71" selection-end-line="25" selection-end-column="71" />
           <folding />
         </state>
       </provider>

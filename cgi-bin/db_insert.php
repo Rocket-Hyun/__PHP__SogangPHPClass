@@ -23,7 +23,7 @@ else {
 }
 
 // define variables and set to empty values
-$idnumber = $name = $email = $phone = $topping =
+$idnumber = $name = $email = $phone = $topping1 = $topping2 = $topping3
    $paymethod  = $callfirst = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
