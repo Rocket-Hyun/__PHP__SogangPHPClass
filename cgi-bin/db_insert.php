@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $email = test_input($_POST["email"]);
   $phone = test_input($_POST["phone"]);
 
-  for($i=0; $i<3); $i++){
+  for($i=0; $i<3; $i++){
     $position = $_POST['topping'];
   }
   $topping1 = $position[0];
