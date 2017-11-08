@@ -68,9 +68,10 @@ if ($connect ->query($sql) === TRUE) {
 
 $connect->close() ;
 
+  echo "<a href='/search.html'>주문 검색하러 가기</a>"
+
 ?>
 
-<a href="/search.html">주문 검색하러 가기</a>
 
 
 </body>
