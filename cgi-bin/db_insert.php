@@ -65,7 +65,7 @@ VALUES ($idnumber, $name, $email, $phone, $topping1, $topping2, $topping3, $paym
 if ($connect ->query($sql) === TRUE) {
   echo "New record created successfully";
 } else {
-  echo "Error: ". $sql . "<br>" . $conn ->error;
+  echo "Error: ". $sql . "<br>" . $connect ->error;
 }
 
 $connect->close() ;
