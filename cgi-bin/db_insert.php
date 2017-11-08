@@ -16,7 +16,7 @@ $connect = new mysqli($hostname, $username, $password, $dbname)
 //$result = mysql_select_db($dbname,$connect);
 
 if($connect) {
- echo("MySQL Server Connect Success!<br />");
+ // echo("MySQL Server Connect Success!<br />");
 }
 else {
  echo("MySQL Server Connect Failed!");
@@ -50,9 +50,12 @@ VALUES ('$idnumber', '$name', '$email', '$phone', '$topping1', '$topping2', '$to
 
 if ($connect ->query($sql) === TRUE) {
   echo "New record created successfully";
+  echo "<table style='width:100%'> <tr><th>Order Number</th><th>Id Number</th> <th>Name</th><th>Email</th><th>Phone Number</th><th>Topping1</th> <th>Topping2</th><th>Topping3</th><th>Pay Method</th><th>Call First</th></tr>";
+  echo "<tr><td>".$idnumber."</td><td>".$name."</td><td>".$row["name"]."</td><td>".$email."</td><td>".$phone."</td> <td>".$topping1."</td><td>".$topping2."</td><td>".$topping3."</td><td>".$paymethod."</td><td>".$callfirst."</td></tr>";
 } else {
   echo "Error: ". $sql . "<br>" . $connect ->error;
 }
+
 
 $connect->close() ;
 
