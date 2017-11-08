@@ -38,10 +38,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $toppings = $_POST['topping'];
 
     for($i=0; $i<3; $i++) {
-      if (isset($toppings[i])) {
-        $position[i] = $toppings[i];
+      if (isset($toppings[$i])) {
+        $position[$i] = $toppings[$i];
       } else {
-        $position[i] = "nothing";
+        $position[$i] = "nothing";
       }
     }
   }
