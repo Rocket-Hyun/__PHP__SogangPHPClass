@@ -31,23 +31,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = test_input($_POST["name"]);
   $email = test_input($_POST["email"]);
   $phone = test_input($_POST["phone"]);
-
-  // 토핑이 여러개 들어갔으면 따로따로 저장
-  if (isset($_POST['topping'])) {
-    $toppings = $_POST['topping'];
-
-    for($i=0; $i<3; $i++) {
-      if (isset($toppings[$i])) {
-        $position[$i] = $toppings[$i];
-      } else {
-        $position[$i] = "Nothing";
-      }
-    }
-  }
-  $topping1 = $position[0];
-  $topping2 = $position[1];
-  $topping3 = $position[2];
-
+  $topping1 = test_input( $_POST['topping1']);
+  $topping2 = test_input( $_POST['topping2']);
+  $topping3 = test_input( $_POST['topping3']);
   $paymethod = test_input($_POST["paymethod"]);
   $callfirst = test_input($_POST["callfirst"]);
 }
