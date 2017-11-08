@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Search Order</title>
+</head>
+<body>
+  <h1>Search Pizza Orders</h1>
+  <hr>
+  <form action="/~cse20120863/cgi-bin/db_display.php" method="GET">
+    <select>
+      <option value="id_number">Id Number</option>
+      <option value="order_number">Order Number</option>
+      <option value="name">Name</option>
+      <option value="email">Email</option>
+      <option value="phone_number">Phone Number</option>
+      <option value="topping1">Topping1</option>
+      <option value="topping2">Topping2</option>
+      <option value="topping3">Topping3</option>
+      <option value="pay_method">Pay Method</option>
+      <option value="call_first">Call First</option>
+    </select>
+    <br />
+    <label>값을 입력해주세요:</label>
+    <input type="text" name="value">
+    <br />
+    <input type="submit" value="검색">
+  </form>
+
+</body>
+</html>
