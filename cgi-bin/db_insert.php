@@ -62,13 +62,12 @@ if ($connect ->query($sql) === TRUE) {
   echo "New record created successfully";
   echo "<table style='width:100%'> <tr><th>Id Number</th> <th>Name</th><th>Email</th><th>Phone Number</th><th>Topping1</th> <th>Topping2</th><th>Topping3</th><th>Pay Method</th><th>Call First</th></tr>";
   echo "<tr><td>".$idnumber."</td><td>".$name."</td><td>".$row["name"]."</td><td>".$email."</td><td>".$phone."</td> <td>".$topping1."</td><td>".$topping2."</td><td>".$topping3."</td><td>".$paymethod."</td><td>".$callfirst."</td></tr>";
+  echo "<a href='/~cse20120863/search.html'>주문 검색하러 가기</a>";
 } else {
   echo "Error: ". $sql . "<br>" . $connect ->error;
 }
 
 $connect->close() ;
-
-  echo "<a href='/search.html'>주문 검색하러 가기</a>"
 
 ?>
 
