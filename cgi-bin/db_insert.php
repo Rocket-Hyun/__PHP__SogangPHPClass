@@ -59,18 +59,14 @@ function test_input($data) {
   return $data;
 }
 
-echo($topping1);
-echo($topping2);
-echo($topping3);
+$sql = "INSERT INTO PizzaOrders (idnumber, name, email, phone_number, topping1, topping2, topping3, pay_method, call_first)
+VALUES ($idnumber, $name, $email, $phone, $topping1, $topping2, $topping3, $paymethod, $callfirst)";
 
-// $sql = "INSERT INTO PizzaOrders (idnumber, name, email, phone_number, topping1, topping2, topping3, pay_method, call_first)
-// VALUES ($idnumber, $name, $email, $phone, $topping1, $topping2, $topping3, $paymethod, $callfirst)";
-//
-// if ($connect ->query($sql) === TRUE) {
-//   echo "New record created successfully";
-// } else {
-//   echo "Error: ". $sql . "<br>" . $conn ->error;
-// }
+if ($connect ->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: ". $sql . "<br>" . $conn ->error;
+}
 
 $connect->close() ;
 
