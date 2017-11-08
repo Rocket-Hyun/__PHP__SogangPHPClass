@@ -32,12 +32,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $email = test_input($_POST["email"]);
   $phone = test_input($_POST["phone"]);
 
-  for($i=0; $i<3; $i++){
+
+  // for($i=0; $i<3; $i++){
     $position = $_POST['topping'];
-  }
-  $topping1 = $position[0];
-  $topping2 = $position[1];
-  $topping3 = $position[2];
+  // }
+  // $topping1 = $position[0];
+  // $topping2 = $position[1];
+  // $topping3 = $position[2];
 
   $paymethod = test_input($_POST["paymethod"]);
   $callfirst = test_input($_POST["callfirst"]);
@@ -50,14 +51,16 @@ function test_input($data) {
   return $data;
 }
 
-$sql = "INSERT INTO PizzaOrders (idnumber, name, email, phone_number, topping1, topping2, topping3, pay_method, call_first)
-VALUES ($idnumber, $name, $email, $phone, $topping1, $topping2, $topping3, $paymethod, $callfirst)";
+echo($position);
 
-if ($connect ->query($sql) === TRUE) {
-  echo "New record created successfully";
-} else {
-  echo "Error: ". $sql . "<br>" . $conn ->error;
-}
+// $sql = "INSERT INTO PizzaOrders (idnumber, name, email, phone_number, topping1, topping2, topping3, pay_method, call_first)
+// VALUES ($idnumber, $name, $email, $phone, $topping1, $topping2, $topping3, $paymethod, $callfirst)";
+//
+// if ($connect ->query($sql) === TRUE) {
+//   echo "New record created successfully";
+// } else {
+//   echo "Error: ". $sql . "<br>" . $conn ->error;
+// }
 
 $connect->close() ;
 

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8ee4945c-fe3a-497b-bef6-21dfe1ddba83" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cgi-bin/db_insert.php" afterPath="$PROJECT_DIR$/cgi-bin/db_insert.php" />
-    </list>
+    <list default="true" id="8ee4945c-fe3a-497b-bef6-21dfe1ddba83" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -67,8 +65,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="741" />
-    <option name="y" value="47" />
+    <option name="x" value="502" />
+    <option name="y" value="11" />
     <option name="width" value="1154" />
     <option name="height" value="1009" />
   </component>
@@ -238,15 +236,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1510154627258</updated>
-      <workItem from="1510154630948" duration="3096000" />
+      <workItem from="1510154630948" duration="3137000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3096000" />
+    <option name="totallyTimeSpent" value="3137000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="741" y="47" width="1154" height="1009" extended-state="0" />
+    <frame x="502" y="11" width="1154" height="1009" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.00911577" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
