@@ -43,50 +43,49 @@ function test_input($data) {
 }
 
 $sql = "SELECT * FROM PizzaOrders WHERE '$column_name' = '$value'"
-$result = $connect->query($sql);
+// $result = $connect->query($sql);
+$result=mysql_query($sql);
 
-// echo "<table style='width:100%'>
-//   <tr>
-//     <th>Id Number</th>
-//     <th>Name</th>
-//     <th>Email</th>
-//     <th>Phone Number</th>
-//     <th>Topping1</th>
-//     <th>Topping2</th>
-//     <th>Topping3</th>
-//     <th>Pay Method</th>
-//     <th>Call First</th>
-//   </tr>
-//   <tr>
-// "
+
+echo "<table style='width:100%'>
+  <tr>
+    <th>Id Number</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone Number</th>
+    <th>Topping1</th>
+    <th>Topping2</th>
+    <th>Topping3</th>
+    <th>Pay Method</th>
+    <th>Call First</th>
+  </tr>
+  <tr>
+"
 
 if ($result->num_rows > 0) {
-  while($row = $result->fetch_assoc()) {
-    // echo "
-    //     <td>" $row["idnumber"] "</td>
-    //     <td>" $row["name"] "</td>
-    //     <td>" $row["email"] "</td>
-    //     <td>" $row["phone_number"] "</td>
-    //     <td>" $row["topping1"] "</td>
-    //     <td>" $row["topping2"] "</td>
-    //     <td>" $row["topping3"] "</td>
-    //     <td>" $row["pay_method"] "</td>
-    //     <td>" $row["call_first"] "</td>
-    // "
+  while($row=mysql_fetch_array($result)) {
+    echo "
+        <td>" $row["idnumber"] "</td>
+        <td>" $row["name"] "</td>
+        <td>" $row["email"] "</td>
+        <td>" $row["phone_number"] "</td>
+        <td>" $row["topping1"] "</td>
+        <td>" $row["topping2"] "</td>
+        <td>" $row["topping3"] "</td>
+        <td>" $row["pay_method"] "</td>
+        <td>" $row["call_first"] "</td>
+    "
   }
 }
 
 
-// echo "
-//   </tr>
-//   </table>
-// "
+echo "
+  </tr>
+  </table>
+"
 
 
 $connect->close() ;
-
-
-
 
 ?>
 
