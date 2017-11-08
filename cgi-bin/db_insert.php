@@ -46,7 +46,7 @@ function test_input($data) {
 }
 
 $sql = "INSERT INTO PizzaOrders (idnumber, name, email, phone_number, topping1, topping2, topping3, pay_method, call_first)
-VALUES ($idnumber, $name, $email, $phone, $topping1, $topping2, $topping3, $paymethod, $callfirst)";
+VALUES ('$idnumber', '$name', '$email', '$phone', '$topping1', '$topping2', '$topping3', '$paymethod', '$callfirst')";
 
 if ($connect ->query($sql) === TRUE) {
   echo "New record created successfully";
