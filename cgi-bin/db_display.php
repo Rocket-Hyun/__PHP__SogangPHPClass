@@ -55,7 +55,7 @@ echo "<table style='width:100%'> <tr><th>Id Number</th> <th>Name</th><th>Email</
 
 if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
-    echo "<tr><td>".$row["id_number"]."</td><td>".$row["name"]."</td><td>".$row["email"]."</td><td>".$row["phone_number"]."</td> <td>".$row["topping1"]."</td><td>".$row["topping2"]."</td><td>".$row["topping3"]."</td><td>".$row["pay_method"]."</td><td>".$row["call_first"]."</td></tr>";
+    echo "<tr><td>".$row["idnumber"]."</td><td>".$row["name"]."</td><td>".$row["email"]."</td><td>".$row["phone_number"]."</td> <td>".$row["topping1"]."</td><td>".$row["topping2"]."</td><td>".$row["topping3"]."</td><td>".$row["pay_method"]."</td><td>".$row["call_first"]."</td></tr>";
   }
 }
 
