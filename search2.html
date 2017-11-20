@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Search Order</title>
+  <style>
+
+  th, td {
+      border: 1px solid black;
+  }
+  #result_table {
+    display:none;
+  }
+  #loading_img {
+    display:none;
+  }
+  </style>
+</head>
+<body>
+  <h1>Search Pizza Orders</h1>
+  <hr>
+  <!--<form action="/practice/db_display.php" method="GET">-->
+    <select name="column_name" id="column">
+      <option value="idnumber">Id Number</option>
+      <option value="ordernumber">Order Number</option>
+      <option value="name">Name</option>
+      <option value="email">Email</option>
+      <option value="phone_number">Phone Number</option>
+      <option value="topping1">Topping1</option>
+      <option value="topping2">Topping2</option>
+      <option value="topping3">Topping3</option>
+      <option value="pay_method">Pay Method</option>
+      <option value="call_first">Call First</option>
+    </select>
+    <br />
+    <label>값을 입력해주세요:</label>
+    <input type="text" name="value" onkeyup="showResult(this.value)">
+    <!---->
+    <!--<br />-->
+    <!--<input type="submit" value="검색">-->
+  <!--</form>-->
+
+  <div>
+    <img id="loading_img" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif">
+    <table style='width:100%' id="result_table">
+        <tbody id="table_body">
+            <tr>
+              <th>Order Number</th>
+              <th>Id Number</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone Number</th>
+              <th>Topping1</th>
+              <th>Topping2</th>
+              <th>Topping3</th>
+              <th>Pay Method</th>
+              <th>Call First</th>
+            </tr>
+        </tbody>
+    </table>
+    <p id="result_text">
+    </p>
+  </div>
+<script>
+function showResult(str) {
+    var column_name = document.getElementById("column").value;
+    if (str.length == 0) {
+        document.getElementById("result_text").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            var table_html = document.getElementById('result_table');
+            var tbody_html = document.getElementById('table_body');
+            var added_html = document.getElementsByClassName('added_data');
+
+            if (added_html.length > 0) {
+              while(added_html[0]) {
+                  added_html[0].parentNode.removeChild(added_html[0]);
+              }
+            }
+            table_html.style.display = "none";
+            document.getElementById("result_text").innerHTML = "";
+            document.getElementById("loading_img").style.display = "initial";
+            if (this.readyState == 4 && this.status == 200) {
+                var response_data = JSON.parse(this.response)
+                console.log(response_data);
+                if (response_data.msg != undefined) {
+                  document.getElementById("result_text").innerHTML = JSON.parse(this.response).msg;
+                  document.getElementById("loading_img").style.display = "none";
+                } else {
+                  document.getElementById("result_text").innerHTML = "";
+                  table_html.style.display = "initial"
+                  response_data.forEach(function(item){
+                    tbody_html.innerHTML += `
+                    <tr class="added_data">
+                     <td>
+                      ${item.order_number}
+                     </td>
+                     <td>
+                      ${item.id_number}
+                     </td>
+                     <td>
+                      ${item.name}
+                     </td>
+                     <td>
+                      ${item.email}
+                     </td>
+                     <td>
+                      ${item.phone_number}
+                     </td>
+                     <td>
+                      ${item.topping1}
+                     </td>
+                     <td>
+                      ${item.topping2}
+                     </td>
+                     <td>
+                      ${item.topping3}
+                     </td>
+                     <td>
+                      ${item.pay_method}
+                     </td>
+                     <td>
+                      ${item.call_first}
+                     </td>
+                    </tr>
+                    `;
+                  });
+                  document.getElementById("loading_img").style.display = "none";
+                }
+            }
+        };
+        xmlhttp.open("GET", "/~cse20120863/cgi-bin/return_result.php?column_name=" + column_name + "&value=" + str, true);
+        xmlhttp.send();
+    }
+}
+</script>
+</body>
+</html>
